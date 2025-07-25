@@ -35,8 +35,8 @@ def chat_endpoint(request: RequestBody):
 
         logger.info(f"Successfully received response from AI agent {request.model_name}")
 
-        #return {"response": response}
-        return JSONResponse(status_code=200, content=response)
+        return {"response": response}
+        #return JSONResponse(status_code=200, content=response)
     
     except Exception as e:
         logger.error(f"Error while generating response: {str(e)}")
